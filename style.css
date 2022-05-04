@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Dark-buttons : hsl(212, 16%, 21%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --Orange: hsl(25, 97%, 53%);
+}
+
+body{
+    background-color: var(--Very-Dark-Blue);
+    font-family: 'Overpass', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+    min-width: 25rem;
+    min-height: 25rem;
+    background-image: linear-gradient( hsl(213, 19%, 18%) 10%, hsl(213, 19%, 12%) 90% );
+    padding: 3rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 15px;
+    overflow: hidden;
+}
+.card{
+    position: absolute;
+}
+
+.front{
+    line-height: 20px;
+    top: 30px;
+}
+
+.front .star{
+ background-color: var(--Dark-buttons);
+ width: 2.5rem;
+ height: 2.5rem;
+ padding-top: 0.7rem ;
+ padding-left: 0.7rem;
+ border-radius: 50%;
+}
+.front h3{
+    color: var(--White);
+    font-size: 25px;
+    font-weight: 700;
+}
+.front p{
+    color: var(--Light-Grey);
+    font-size: 15px;
+    width: 20rem;
+}
+
+.front .buttons{
+    margin: 2rem;
+}
+.front .buttons input{
+    background-color: var(--Dark-buttons);
+    color: var(--Light-Grey);
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    margin: 0.2rem;
+    border: 0;
+    border-radius: 50% ;
+    transition: background-color 600ms ease, 
+    color 600ms ease ;
+}
+
+.front .buttons input:hover{
+    background-color: var(--Light-Grey);
+    color: var(--White);
+}
+
+.front .buttons input:focus{
+    background-color: var(--Orange);
+    color: var(--White);
+}
+
+.front button{
+    min-width: 350px;
+    padding: 0.7rem;
+    border-radius: 2rem;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: var(--Orange);
+    color: var(--White);
+    border: 0;
+    cursor: pointer;
+    transition: background-color 600ms ease, 
+    color 600ms ease;
+}
+.front button:hover {
+    background-color: var(--White);
+    color: var(--Orange);
+}
+.card.back.active{
+    display: block;
+    top: 20px;
+    left: 0;
+    height: 100%;
+}
+.card.back{
+    background-image: linear-gradient( hsl(213, 19%, 18%) 10%, hsl(213, 19%, 12%) 90% );
+    display: none;
+    padding: 0rem 2rem 0rem 2rem;
+    text-align: center;
+}
+.back .selection{
+    background-color: var(--Dark-buttons);
+    color: var(--Orange);
+    width: 12rem;
+    padding: 0.5em 1em;
+    margin: 2rem;
+    border-radius: 1.5rem;
+    transform: translateX(20%);
+}
+.back h2{
+    color: var(--White);
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+.back p{
+    color: var(--Light-Grey);
+    font-size: 15px;
+    margin: 0;
+}
