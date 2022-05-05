@@ -77,6 +77,9 @@ body{
     transition: background-color 600ms ease, 
     color 600ms ease ;
 }
+.front .buttons input:focus{
+    outline: none;
+}
 
 .front .buttons input:hover{
     background-color: var(--Light-Grey);
@@ -137,7 +140,7 @@ body{
     margin: 0;
 }
 
-@media (max-width: 380px) {
+@media (max-width: 390px) {
     .container{
         min-width: 20rem;
         min-height: 22rem;
