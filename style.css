@@ -59,7 +59,7 @@ body{
 .front p{
     color: var(--Light-Grey);
     font-size: 15px;
-    width: 20rem;
+ 
 }
 
 .front .buttons{
@@ -135,4 +135,47 @@ body{
     color: var(--Light-Grey);
     font-size: 15px;
     margin: 0;
+}
+
+@media (max-width: 380px) {
+    .container{
+        min-width: 20rem;
+        min-height: 22rem;
+        padding: 3rem 1rem;
+        border-radius: 1rem;
+    }
+    .front .buttons{
+        margin: 1rem;
+    }
+    .card.front{
+        left: 0;
+        max-width: 20rem;
+        padding: 0 0.5rem 0 1em;
+    }
+    .front .buttons input{
+        background-color: var(--Dark-buttons);
+        color: var(--Light-Grey);
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.5rem;
+    }
+    .front button{
+        top: 30px;
+        min-width: 18rem;
+    }
+    .card.back{
+        padding: 1rem 1rem 2rem 1rem;
+        text-align: center;
+    }
+  
+    .back .selection{
+        width: 10rem;
+        margin: 1rem;
+        margin-bottom: 1.5rem;
+        transform: translateX(30%);
+    }
+    .back h2{
+        font-size: 1.5rem;
+    }
+  
 }
